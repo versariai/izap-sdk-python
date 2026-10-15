@@ -1,0 +1,9 @@
+.venv/
+.venv-py311/
+__pycache__/
+*.py[cod]
+dist/
+build/
+*.egg-info/
+.ruff_cache/
+.pytest_cache/

@@ -1,0 +1,15 @@
+literal_enums: true
+# scripts/generate.py runs ruff itself, with the venv's pinned ruff.
+post_hooks: []
+# FastAPI names multipart bodies after the handler and route; give them readable names.
+# Keys are the class names the generator would otherwise emit.
+class_overrides:
+  BodyUploadBusinessLibraryDocumentForCurrentBusinessApiV1BusinessesLibraryDocumentsPost:
+    class_name: UploadBusinessLibraryDocumentBody
+    module_name: upload_business_library_document_body
+  BodyUploadBusinessLibraryImageForCurrentBusinessApiV1BusinessesLibraryImagesPost:
+    class_name: UploadBusinessLibraryImageBody
+    module_name: upload_business_library_image_body
+  BodyUploadFilesApiV1ChatsChatIdUploadPost:
+    class_name: UploadChatAttachmentBody
+    module_name: upload_chat_attachment_body
